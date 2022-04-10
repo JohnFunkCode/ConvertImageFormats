@@ -13,7 +13,7 @@ def recursive_copy_bmp_images_to_jpg():
     for input_file in glob.glob('E:\\pictures\\**\\*.'+_input_file_extension, recursive=True):
         # create a new name
         newname = _ignore_case_regex_pattern.sub(_output_file_extension, input_file)
-        print("converting {} to {}".format(input_file, newname))
+        print("Copying {} to {}".format(input_file, newname))
         # save a new version of the image
         image = Image.open(input_file)
         image = image.convert('RGB')
